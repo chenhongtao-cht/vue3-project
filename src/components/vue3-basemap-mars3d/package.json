@@ -1,0 +1,23 @@
+{
+  "name": "@sutpc/vue3-basemap-mars3d",
+  "version": "1.0.7",
+  "description": "基于mars3d的vue3组件basemap",
+  "main": "src/index.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "publishConfig": {
+    "registry": "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/"
+  },
+  "keywords": [
+    "mars3d",
+    "cesium",
+    "vue3"
+  ],
+  "author": "sutpc",
+  "license": "ISC",
+  "dependencies": {
+    "lodash-es": "^4.x"
+  }
+}
