@@ -63,7 +63,8 @@
   
 </template>
 <script lang="ts" setup>
-import { ref, reactive, onMounted  } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
+import Api from "./api"
 import { DateOPtion, PlatformOption, onlineCarData, getMarketShare, getWaitingTime, getDeathAccidentRate, getOperationViolationRate, getCompliantOrdersRate, getQuarterLabel } from "../config.js"
 
 const formData = reactive({
@@ -96,8 +97,17 @@ const getTableData = () => {
 const onSubmit = () => {
   getTableData()
 }
+
+const Init = async () => { 
+    const res = await Api.getOnlineCarInfoList({
+        quarter: "202301"
+    })
+    console.log(res,"res");
+    
+}
 // 页面加载时
 onMounted(() => {
+    Init();
 	getTableData();
 });
 </script>

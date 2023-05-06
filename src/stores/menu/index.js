@@ -4,6 +4,10 @@ export const useMenuStore = defineStore('menu', {
   state: () => {
     return {
         menuData: [{
+            id: '/test',
+            text: '测试功能',
+            link: '/test'
+        },{
             id: '/test-css',
             text: '练习模板',
             link: '/test-css'
