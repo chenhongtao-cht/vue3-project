@@ -1,12 +1,12 @@
 // node 后端服务器
 //index.js——Express 服务器入口文件
 
-const userApi = require('./api/user-api')
 const fs = require('fs')
 const path = require('path')
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
+const ApiConfig = require("./api/index")
 
 //采用设置所有均可访问的方法解决跨域问题
 app.all("*", function (req, res, next) {
@@ -26,9 +26,11 @@ app.get('/', (req, res) => {
 })
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-// 后端api路由
 
-app.use('/onlineCar', userApi)
+// 后端api路由
+ApiConfig.forEach(item => { 
+  app.use(item.key, item.value)
+})
 
 // 监听端口
 app.listen(3001)

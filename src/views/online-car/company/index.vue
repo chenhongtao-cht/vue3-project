@@ -102,8 +102,12 @@ const Init = async () => {
     const res = await Api.getOnlineCarInfoList({
         quarter: "202301"
     })
-    console.log(res,"res");
-    
+    console.log(res, "res");
+
+    const res1 = await Api.getOnlineCarInfoByCompanyList({
+        company: formData.platform
+    })
+    console.log(res1,"res1");
 }
 // 页面加载时
 onMounted(() => {

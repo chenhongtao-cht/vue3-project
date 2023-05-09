@@ -1,16 +1,19 @@
 import Request from "@/components/request/index"
 
-const getOnlineCarInfoList = () => Request.get({
+const getOnlineCarInfoList = (data) => Request.post({
     url: "/api/onlineCar/getOnlineCarCompanyInfo",
     showLoading: true,
+    data
 })
-const query = () => Request.get({
-    url: "/api/query",
+
+const getOnlineCarInfoByCompanyList = (data) => Request.get({
+    url: "/api/onlineCar/getOnlineCarCompanyInfoByCompany",
     showLoading: true,
+    data
 })
 
 
 export default {
     getOnlineCarInfoList,
-    query
+    getOnlineCarInfoByCompanyList
 }
