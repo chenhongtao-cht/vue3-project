@@ -10,7 +10,6 @@ const request = new Request({
             if (method === "get") {
                 config.params = data
             }
-            console.log('Request实例请求成功的拦截器')
             return config
         },
         requestErrorInterceptor(err) {
@@ -18,7 +17,6 @@ const request = new Request({
             return err
         },
         responseSuccessInterceptor(res) {
-            console.log('Request实例响应成功的拦截器')
             return res?.data
         },
         responseErrorInterceptor(error) {
