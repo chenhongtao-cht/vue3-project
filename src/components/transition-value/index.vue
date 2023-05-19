@@ -1,0 +1,31 @@
+<template>
+  {{ output.toFixed(0) }}
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import { TransitionPresets, useTransition } from '@vueuse/core';
+
+const source = ref(0);
+
+const output = useTransition(source, {
+    delay: 5000, // 延时 ms
+    duration: 1000, // 执行周期 ms
+    disabled: false, // 是否启用过渡效果
+    onStarted() {
+        // called after the transition starts
+    },
+    onFinished() {
+        // called after the transition ends
+    },
+    transition: TransitionPresets.easeInOutCubic, // 过渡方式
+});
+
+const init = () => {
+    source.value = Math.floor(Math.random() * 20000);
+}
+  
+onMounted(() => {
+    init();
+});
+</script>
