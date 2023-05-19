@@ -1,4 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
+import type { NProgressOptions } from 'nprogress';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 
 const routeConfig = [
   {
@@ -88,10 +91,17 @@ const router = createRouter({
   scrollBehavior: () => ({ left: 0, top: 0 })
 });
 
+NProgress.configure({ showSpinner: false } as NProgressOptions);
+
 export const setupRouter = (app: any) => {
   // 做路由loading 处理 并挂载vue-router
   router.beforeEach((to, from, next) => {
+    NProgress.start();
     next();
+  });
+
+  router.afterEach((to) => {
+    NProgress.done();
   });
 
   app.use(router);

@@ -5,8 +5,11 @@ const db = require('../db');
 
 // 获取某季度的网约车数据
 router.post('/getOnlineCarCompanyInfo', async (req, res) => {
-  const { quarter } = req.body
-  const sql =`SELECT * FROM online_car_data t WHERE t.quarter = ${quarter}`
+  const { quarter = [], platform } = req.body
+  let sql = `SELECT * FROM online_car_data t WHERE t.quarter IN (${quarter.join()})`
+  if (platform) { 
+    sql += ` AND t.platform = '${platform}'`
+  }
   
   try {
     const data = await db(sql)

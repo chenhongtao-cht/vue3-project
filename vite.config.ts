@@ -5,7 +5,9 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue()
+  ],
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.less', '.css'],
     alias: {
@@ -18,6 +20,9 @@ export default defineConfig({
       less: {
         javascriptEnabled: true,
         charset: false,
+      },
+      postcss: {
+        plugins: [require("tailwindcss"), require("autoprefixer")]
       }
     },
     devSourcemap: true
