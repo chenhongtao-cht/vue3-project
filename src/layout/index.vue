@@ -51,7 +51,7 @@ const isLogin = computed(() => {
   .router-wrap {
     // overflow: auto;
     flex: 1;
-    min-height: 0;
+    height: 0;
     background: #f3f4fa;
     position: relative;
   }
