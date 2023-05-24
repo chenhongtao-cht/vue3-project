@@ -1,0 +1,8 @@
+/build/
+/dist/
+/*.js
+.vscode
+/node_modules/*
+/dist*
+/src/main.ts
+/vite.config.ts
