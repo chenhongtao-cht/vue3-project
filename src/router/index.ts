@@ -50,6 +50,14 @@ const routeConfig = [
         }
       },
       {
+        path: '/map/mars3d',
+        name: 'mars3d',
+        component: () => import('@/views/map/mars3d/index.vue'),
+        meta: {
+          title: 'mars3d地图',
+        }
+      },
+      {
         path: '/test-css',
         name: 'test-css',
         component: () => import('@/views/test-css/index.vue'),

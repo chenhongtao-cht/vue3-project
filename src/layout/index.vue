@@ -39,11 +39,13 @@ const isLogin = computed(() => {
   flex-direction: column;
   box-sizing: border-box;
   .header-wrap {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     padding-left: 20px;
     line-height: 60px;
     font-size: 16px;
+    border: 1px solid #eee;
     .title {
       min-width: 200px;
     }
