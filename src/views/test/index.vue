@@ -1,19 +1,21 @@
 <template>
-    <PropsTest :title="title" :content="content"></PropsTest>
-    <div class="text-red-500 bg-black flex justify-center text-base">{{text}}</div>
+  <div>
+    {{ test }}
+  </div>
 </template>
 
 <script setup lang="ts">
-import PropsTest from "./components/props-test.vue"
-import { ref, onMounted } from 'vue'
+import { reactive, ref } from "vue";
+interface PeopleInfo {
+    name: string;
+    year?: string;
+    sex?: string;
+    address?: string;
+}
 
-const title = ref('标题1')
-const content = ref('内容1')
-const text = ref('2222')
-
-onMounted(() => {
-    text.value = '1111'
-    title.value = "标题改变"
-    content.value = "内容改变"
-});
+const test = ref("333");
 </script>
+
+<style lang='less' scoped>
+
+</style>

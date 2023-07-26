@@ -1,8 +1,14 @@
 export const menuData = [
   {
     id: "line",
-    text: "添加线层",
-    children: [],
+    text: "geojson图层",
+    children: [
+      {
+        id: "mars3d",
+        text: "mars3d",
+        link: "/map/mars3d",
+      },
+    ],
   },
   {
     id: "map",

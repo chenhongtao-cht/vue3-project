@@ -1,12 +1,26 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue';
+import { visualizer } from "rollup-plugin-visualizer";
+import viteCompression from 'vite-plugin-compression';
+import externalGlobals from 'rollup-plugin-external-globals'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: process.cwd(), // 项目index.html 的位置
+  base: '/', // 公共基础路径
+  mode: '',
   plugins: [
-    vue()
+    vue(),
+    visualizer({
+      gzipSize: true,
+      brotliSize: true,
+      emitFile: false,
+      filename: "test.html", //分析图生成的文件名
+      open: true //如果存在本地服务端口，将在打包后自动展示
+    }),
+    viteCompression(),
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.less', '.css'],
@@ -35,6 +49,18 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
+    }
+  },
+  build: {
+    // sourcemap: true,
+    rollupOptions: {
+      external: ['vue', 'element-plus'],
+      plugins: [
+        externalGlobals({
+          vue: 'Vue',
+          'element-plus': 'ElementPlus',
+        }),
+      ],
     }
   }
 })
