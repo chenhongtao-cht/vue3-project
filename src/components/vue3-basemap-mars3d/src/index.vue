@@ -59,12 +59,12 @@ export async function loadMars3d() {
   }
 
   await Promise.all([
-    loadCss(makeUrl("static/mars3d-cesium/Build/Cesium/Widgets/widgets.css")),
-    loadCss(makeUrl("static/mars3d/mars3d.css")),
+    loadCss(makeUrl("static/js/mars3d-cesium/Build/Cesium/Widgets/widgets.css")),
+    loadCss(makeUrl("static/js/mars3d/mars3d.css")),
   ]);
-  await loadScriptCore(makeUrl("static/mars3d-cesium/Build/Cesium/Cesium.js"), "Cesium");
-  await loadScriptCore(makeUrl("static/mars3d/mars3d.js"), "mars3d");
-  await loadScriptCore(makeUrl("static/turf/6.5.0/turf.min.js"), "turf");
+  await loadScriptCore(makeUrl("static/js/mars3d-cesium/Build/Cesium/Cesium.js"), "Cesium");
+  await loadScriptCore(makeUrl("static/js/mars3d/mars3d.js"), "mars3d");
+  await loadScriptCore(makeUrl("static/js/turf/6.5.0/turf.min.js"), "turf");
 }
 
 export default {
@@ -135,8 +135,8 @@ export default {
       if (this.heatmap && typeof window["mars3d-heatmap"] === "undefined") {
         //热力图依赖
         await Promise.all([
-          loadScript("static/mars3d/plugins/heatmap/heatmap.js"),
-          loadScript("static/mars3d/plugins/heatmap/mars3d-heatmap.js"),
+          loadScript("static/js/mars3d/plugins/heatmap/heatmap.js"),
+          loadScript("static/js/mars3d/plugins/heatmap/mars3d-heatmap.js"),
         ]);
       }
 

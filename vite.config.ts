@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { visualizer } from "rollup-plugin-visualizer";
+// import { visualizer } from "rollup-plugin-visualizer";
 import viteCompression from 'vite-plugin-compression';
 import externalGlobals from 'rollup-plugin-external-globals'
 
@@ -13,13 +13,13 @@ export default defineConfig({
   mode: '',
   plugins: [
     vue(),
-    visualizer({
-      gzipSize: true,
-      brotliSize: true,
-      emitFile: false,
-      filename: "test.html", //分析图生成的文件名
-      open: true //如果存在本地服务端口，将在打包后自动展示
-    }),
+    // visualizer({
+    //   gzipSize: false,
+    //   brotliSize: true,
+    //   emitFile: false,
+    //   filename: "test.html", //分析图生成的文件名
+    //   open: true //如果存在本地服务端口，将在打包后自动展示
+    // }),
     viteCompression(),
   ],
   resolve: {
@@ -51,16 +51,16 @@ export default defineConfig({
       }
     }
   },
-  build: {
-    // sourcemap: true,
-    rollupOptions: {
-      external: ['vue', 'element-plus'],
-      plugins: [
-        externalGlobals({
-          vue: 'Vue',
-          'element-plus': 'ElementPlus',
-        }),
-      ],
-    }
-  }
+  // build: {
+  // sourcemap: true,
+  // rollupOptions: {
+  //   external: ['vue', 'element-plus'],
+  //   plugins: [
+  //     externalGlobals({
+  //       vue: 'Vue',
+  //       'element-plus': 'ElementPlus',
+  //     }),
+  //   ],
+  // }
+  // }
 })

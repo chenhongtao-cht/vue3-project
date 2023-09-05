@@ -13,7 +13,7 @@
 
 <script setup>
 import BaseMenu from "@/components/base-menu/index.vue"
-import BaseMap from '@/components/vue3-basemap-mars3d'
+import BaseMap from '@/components/vue3-basemap-mars3d/src/index.vue'
 import { menuData } from "./config.js"
 import { ref } from "vue"
 import LineLayer from "./components/line-layer.vue"
