@@ -31,6 +31,18 @@ export const useMenuStore = defineStore("menu", {
             },
           ],
         },
+         {
+          id: "common",
+          text: "通用组件",
+          link: null,
+          children: [
+            {
+              id: "water-fall",
+              text: "瀑布流",
+              link: "/common/water-fall",
+            },
+          ],
+        },
         {
           id: "online-car",
           text: "网约车",

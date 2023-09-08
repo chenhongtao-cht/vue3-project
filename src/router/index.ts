@@ -89,6 +89,14 @@ const routeConfig = [
           title: '网约车指标',
         }
       },
+      {
+        path: '/common/water-fall',
+        name: 'common-water-fall',
+        component: () => import('@/views/common/water-fall/index.vue'),
+        meta: {
+          title: '瀑布流',
+        }
+      },
     ]
   }
 ];
