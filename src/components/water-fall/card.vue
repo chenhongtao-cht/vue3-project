@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="img" ref="dom" :style="`background-color: rgb(${color[0]}, ${color[1]}, ${color[2]});`">
+    <div class="img" ref="dom" :style="{ backgroundColor: getRandomColor()}">
       <Transition>
         <img v-if="loaded" :src="props.data.img" alt="图片" />
       </Transition>
@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useIntersectionObserver } from '@vueuse/core'
+import { useIntersectionObserver } from '@vueuse/core';
 
 const props = defineProps({
   data: {
@@ -26,6 +26,16 @@ const props = defineProps({
 
 const dom = ref<HTMLDivElement>(null);
 const loaded = ref(false);
+
+const getRandomColor = () => {
+  // const letters = '0123456789ABCDEF';
+  // let color = '#';
+  // for (let i = 0; i < 6; i++) {
+  //   color += letters[Math.floor(Math.random() * 16)];
+  // }
+  // return color;
+  return '#' + Math.random().toString(16).slice(-6);
+};
 
 const { stop } = useIntersectionObserver(dom, ([{ isIntersecting }]) => {
   if (isIntersecting) {
@@ -50,7 +60,8 @@ const { stop } = useIntersectionObserver(dom, ([{ isIntersecting }]) => {
     flex: 1;
     width: 100%;
     height: 0;
-    background: transparent;
+    // background: transparent;
+    filter: contrast(100%) opacity(100%);
 
     img {
       width: 100%;
