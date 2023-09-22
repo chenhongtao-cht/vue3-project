@@ -97,6 +97,14 @@ const routeConfig = [
           title: '瀑布流',
         }
       },
+      {
+        path: '/common/virtualized-table',
+        name: 'common-virtualized-table',
+        component: () => import('@/views/common/virtualized-table/index.vue'),
+        meta: {
+          title: '虚拟化表格',
+        }
+      },
     ]
   }
 ];

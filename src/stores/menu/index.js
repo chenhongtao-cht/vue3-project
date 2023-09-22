@@ -41,6 +41,11 @@ export const useMenuStore = defineStore("menu", {
               text: "瀑布流",
               link: "/common/water-fall",
             },
+            {
+              id: "virtualized-table",
+              text: "虚拟化表格",
+              link: "/common/virtualized-table",
+            },
           ],
         },
         {
