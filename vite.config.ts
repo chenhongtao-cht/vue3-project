@@ -1,6 +1,8 @@
+/// <reference types="vitest" />
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite';
+// import { defineConfig } from 'vite'; // vite中的defineConfig 不包含test选项，故改为使用vitest/config中引入 活使用vitest.config.js 配置test选项
+import { defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
 // import { visualizer } from "rollup-plugin-visualizer";
 import viteCompression from 'vite-plugin-compression';
@@ -22,6 +24,26 @@ export default defineConfig({
     // }),
     viteCompression(),
   ],
+  test: {
+    // 模拟dom环境
+    environment: "happy-dom",
+    coverage: {
+      // 覆盖率提供者
+      provider: "istanbul",
+      reporter: ["text", "json", "html"],
+      // 设置覆盖文件夹
+      reportsDirectory: "./coverage",
+      // 检查每个文件的阈值
+      perFile: true,
+      // 设置代码覆盖率阈值
+      lines: 75,
+      functions: 75,
+      branches: 75,
+      statements: 75,
+    },
+    open: true,
+    include: ["./src/components/**/*.{test,spec}.{js,ts}"],
+  },
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.less', '.css'],
     alias: {
