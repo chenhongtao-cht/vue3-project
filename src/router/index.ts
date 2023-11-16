@@ -105,6 +105,14 @@ const routeConfig = [
           title: '虚拟化表格',
         }
       },
+      {
+        path: '/common/scroll-number',
+        name: 'common-scroll-number',
+        component: () => import('@/views/common/scroll-number/index.vue'),
+        meta: {
+          title: '滚动的数字',
+        }
+      },
     ]
   }
 ];

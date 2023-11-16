@@ -31,7 +31,7 @@ export const useMenuStore = defineStore("menu", {
             },
           ],
         },
-         {
+        {
           id: "common",
           text: "通用组件",
           link: null,
@@ -45,6 +45,11 @@ export const useMenuStore = defineStore("menu", {
               id: "virtualized-table",
               text: "虚拟化表格",
               link: "/common/virtualized-table",
+            },
+            {
+              id: "scroll-number",
+              text: "滚动数字",
+              link: "/common/scroll-number",
             },
           ],
         },
