@@ -48,20 +48,9 @@ const getBindValue = computed(() => {
   }
 })
 
-const numberBox = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.', '-', ':', ' ']
-const ignoreStr = ['.', ' ', '-', ':']
-const numberToArray = ref<any[]>([])
-
-watch(
-  () => props.number,
-  (n) => {
-    numberToArray.value = n.toString().split('')
-  },
-  {
-    immediate: true,
-    deep: true
-  }
-)
+const numberBox = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.', '-', ':', ' '];
+const ignoreStr = ['.', ' ', '-', ':'];
+const numberToArray = computed(() => props.number.toString().split(''));
 
 const numStyle = computed(() => {
   return {
@@ -69,12 +58,12 @@ const numStyle = computed(() => {
     height: `${props.h}px`,
     fontSize: `${props.h}px`
   }
-})
+});
 
 const animateStyle = (item: any) => {
   const index = item.trim().length === 0 ? 9999 : numberBox.findIndex((i) => item == i)
   return { transform: `translate(0,-${index * props.h}px)` }
-}
+};
 </script>
 
 <style lang="less" scoped>
