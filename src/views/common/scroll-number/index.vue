@@ -13,7 +13,7 @@ const num = ref(56789);
 
 const init = () => {
   timer = setInterval(() => {
-    num.value = Number.parseInt(Math.random() * 10000) + 2000;
+    num.value += 3;
   }, 2 * 1000);
 };
 

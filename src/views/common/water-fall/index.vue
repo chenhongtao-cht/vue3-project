@@ -17,18 +17,18 @@ const imgData = reactive({
   pageSize: 80
 })
 
-const handleLoadMoreData = async () => { 
+const handleLoadMoreData = async () => {
   const res = await Api.getImageList({ ...imgData });
   if (res && res.length) {
     imgList.value = [...imgList.value, ...res];
     imgData.currentPage += 1;
     hasMore.value = true;
-  } else { 
+  } else {
     hasMore.value = false;
   }
 }
 
-onMounted(() => { 
+onMounted(() => {
   handleLoadMoreData();
 })
 
@@ -39,5 +39,4 @@ onMounted(() => {
   width: 100%;
   height: 100%;
 }
-
 </style>

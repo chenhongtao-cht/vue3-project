@@ -113,6 +113,14 @@ const routeConfig = [
           title: '滚动的数字',
         }
       },
+      {
+        path: '/common/image-cropper',
+        name: 'common-image-cropper',
+        component: () => import('@/views/common/image-cropper/index.vue'),
+        meta: {
+          title: '图片裁剪',
+        }
+      },
     ]
   }
 ];
