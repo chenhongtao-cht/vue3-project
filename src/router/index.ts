@@ -121,6 +121,14 @@ const routeConfig = [
           title: '图片裁剪',
         }
       },
+      {
+        path: '/common/time-picker',
+        name: 'common-time-picker',
+        component: () => import('@/views/common/time-picker/index.vue'),
+        meta: {
+          title: '时间选择',
+        }
+      },
     ]
   }
 ];

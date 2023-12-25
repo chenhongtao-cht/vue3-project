@@ -5,30 +5,30 @@
       <Smenu />
     </header>
     <div class="router-wrap" ref="routerWrapRef">
-      <router-view v-if="isLoadingGlobalContextReady"/>
+      <router-view v-if="isLoadingGlobalContextReady" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { ref, onMounted, computed } from 'vue';
-  import { useRoute } from 'vue-router';
-  import Smenu from './components/menu.vue';
+import { ref, onMounted, computed } from 'vue';
+import { useRoute } from 'vue-router';
+import Smenu from './components/menu.vue';
 
-  // loading setting
-  const routerWrapRef = ref(null);
-  const isLoadingGlobalContextReady = ref(true);
-  const route = useRoute();
+// loading setting
+const routerWrapRef = ref(null);
+const isLoadingGlobalContextReady = ref(true);
+const route = useRoute();
 
-const isLogin = computed(() => {  
-    console.log(route.path, "route.path");
-      
-    return route.path === "/login"
-  });
-  
-  onMounted(() => {
-    isLoadingGlobalContextReady.value = true;
-  });
+const isLogin = computed(() => {
+  console.log(route.path, "route.path");
+
+  return route.path === "/login"
+});
+
+onMounted(() => {
+  isLoadingGlobalContextReady.value = true;
+});
 
 </script>
 
@@ -38,6 +38,7 @@ const isLogin = computed(() => {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
   .header-wrap {
     box-sizing: border-box;
     display: flex;
@@ -46,10 +47,12 @@ const isLogin = computed(() => {
     line-height: 60px;
     font-size: 16px;
     border: 1px solid #eee;
+
     .title {
       min-width: 200px;
     }
   }
+
   .router-wrap {
     // overflow: auto;
     flex: 1;
@@ -58,5 +61,4 @@ const isLogin = computed(() => {
     position: relative;
   }
 }
-
 </style>

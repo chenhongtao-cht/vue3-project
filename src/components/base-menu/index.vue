@@ -1,10 +1,5 @@
 <template>
-  <el-menu
-    class="base-menu"
-    :default-active="activePath"
-    :mode="props.mode"
-    @select="handleSelect"
-  >
+  <el-menu class="base-menu" :default-active="activePath" :mode="props.mode" :ellipsis="false" @select="handleSelect">
     <menu-item v-for="menu in menuData" :menu-data="menu" :key="menu.id"></menu-item>
   </el-menu>
 </template>
@@ -13,15 +8,15 @@
 import MenuItem from './menu-item.vue'
 // 定义父组件传过来的值
 const props = defineProps({
-	menuData: {
-		type: Array,
-		default: () => {
+  menuData: {
+    type: Array,
+    default: () => {
       return [];
-		},
+    },
   },
   mode: {
-		type: String,
-		default: 'horizontal'
+    type: String,
+    default: 'horizontal'
   },
   activePath: {
     type: String,
@@ -33,7 +28,7 @@ const props = defineProps({
 const emits = defineEmits(['select']);
 
 const handleSelect = (key: string, keyPath: string, item: Object) => {
-  emits('select',key, keyPath, item)
+  emits('select', key, keyPath, item)
 }
 
 </script>

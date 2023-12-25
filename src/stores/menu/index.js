@@ -56,6 +56,11 @@ export const useMenuStore = defineStore('menu', {
               text: '图片裁剪',
               link: '/common/image-cropper',
             },
+            {
+              id: 'time-picker',
+              text: '时间选择',
+              link: '/common/time-picker',
+            },
           ],
         },
         {

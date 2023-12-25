@@ -11,7 +11,7 @@ import externalGlobals from 'rollup-plugin-external-globals'
 // https://vitejs.dev/config/
 export default defineConfig({
   root: process.cwd(), // 项目index.html 的位置
-  base: '/', // 公共基础路径
+  base: '/project/', // 公共基础路径
   mode: '',
   plugins: [
     vue(),
@@ -22,7 +22,13 @@ export default defineConfig({
     //   filename: "test.html", //分析图生成的文件名
     //   open: true //如果存在本地服务端口，将在打包后自动展示
     // }),
-    viteCompression(),
+    viteCompression(
+      {
+        filter: /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i, // 需要压缩的文件
+        algorithm: 'gzip',
+        threshold: 10240,
+      }
+    ),
   ],
   test: {
     // 模拟dom环境

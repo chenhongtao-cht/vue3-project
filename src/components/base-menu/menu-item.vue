@@ -1,27 +1,16 @@
 <template>
-    <el-sub-menu
-        :class="menuData.class"
-        :index="menuData.id"
-        :key="menuData.id"
-        v-if="menuData.children && menuData.children.length > 0"
-    >
+    <el-sub-menu :class="menuData.class" :index="menuData.id" :key="menuData.id"
+        v-if="menuData.children && menuData.children.length > 0">
         <template #title>
             <span class="menu-title">
                 {{ menuData.text }}
             </span>
             <slot :name="menuData.id"></slot>
         </template>
-        <sub-menu 
-            v-for="menu in menuData.children"
-            :key="menu.id"
-            :menu-data="menu">
+        <sub-menu v-for="menu in menuData.children" :key="menu.id" :menu-data="menu">
         </sub-menu>
     </el-sub-menu>
-    <el-menu-item
-        :class="menuData.class"
-        :index="menuData.id"
-        v-else
-    >
+    <el-menu-item :class="menuData.class" :index="menuData.id" v-else>
         {{ menuData.text }}
         <slot :name="menuData.id"></slot>
     </el-menu-item>
@@ -87,7 +76,7 @@ export default {
             }
 
             let foundMenu = null;
-            let each = function(menuArr) {
+            let each = function (menuArr) {
                 if (!menuArr || menuArr.length <= 0 || foundMenu) {
                     return;
                 }

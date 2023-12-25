@@ -1,10 +1,5 @@
 <template>
-  <el-menu
-    :default-active="activePath"
-    class="el-menu-demo"
-    mode="horizontal"
-    @select="handleSelect"
-  >
+  <el-menu :default-active="activePath" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
     <menu-item v-for="menu in menuData" :menu-data="menu" :key="menu.id"></menu-item>
   </el-menu>
 </template>
