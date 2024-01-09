@@ -795,6 +795,11 @@
     "@webassemblyjs/ast" "1.11.5"
     "@xtuc/long" "4.2.2"
 
+"@xmldom/xmldom@^0.8.10":
+  "integrity" "sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/@xmldom/xmldom/-/xmldom-0.8.10.tgz"
+  "version" "0.8.10"
+
 "@xtuc/ieee754@^1.2.0":
   "version" "1.2.0"
 
@@ -1421,6 +1426,20 @@
   dependencies:
     "esutils" "^2.0.2"
 
+"docxtemplater-image-module-free@^1.1.1":
+  "integrity" "sha512-aWOzVQN7ggDYjfoy3pTTNrcrZ7/CJrQcI9cT+hmyHE6nRLR67nt5yPFPe9hm9VWbfYIED2fi+3itOnF0TE/RWQ=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/docxtemplater-image-module-free/-/docxtemplater-image-module-free-1.1.1.tgz"
+  "version" "1.1.1"
+  dependencies:
+    "xmldom" "^0.1.27"
+
+"docxtemplater@^3.43.0":
+  "integrity" "sha512-ZbuHhJVrNO8Xt29I317lBXfy6SYbbgjB0yv76ff0KhXVwSHd1C3Kjpfy+db412bAmQoy0Lmfa1YSJTNKwuV5fA=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/docxtemplater/-/docxtemplater-3.43.0.tgz"
+  "version" "3.43.0"
+  dependencies:
+    "@xmldom/xmldom" "^0.8.10"
+
 "editorconfig@^1.0.3":
   "integrity" "sha512-L9Qe08KWTlqYMVvMcTIvMAdl1cDUubzRNYL+WfA4bLDMHe4nemKkpmYzkznE1FwLKu0EEmy6obgQKzMJrg4x9Q=="
   "resolved" "http://10.3.4.17:8081/repository/sutpc-npm-group/editorconfig/-/editorconfig-1.0.4.tgz"
@@ -1851,6 +1870,11 @@
   "version" "6.0.1"
   dependencies:
     "flat-cache" "^3.0.4"
+
+"file-saver@^2.0.5":
+  "integrity" "sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/file-saver/-/file-saver-2.0.5.tgz"
+  "version" "2.0.5"
 
 "fill-range@^7.0.1":
   "integrity" "sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ=="
@@ -2527,6 +2551,11 @@
   optionalDependencies:
     "graceful-fs" "^4.1.6"
 
+"jszip-utils@^0.1.0":
+  "integrity" "sha512-tBNe0o3HAf8vo0BrOYnLPnXNo5A3KsRMnkBFYjh20Y3GPYGfgyoclEMgvVchx0nnL+mherPi74yLPIusHUQpZg=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/jszip-utils/-/jszip-utils-0.1.0.tgz"
+  "version" "0.1.0"
+
 "klona@^2.0.4":
   "version" "2.0.6"
 
@@ -2981,6 +3010,11 @@
   dependencies:
     "p-limit" "^3.0.2"
 
+"pako@^2.1.0":
+  "integrity" "sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/pako/-/pako-2.1.0.tgz"
+  "version" "2.1.0"
+
 "parent-module@^1.0.0":
   "integrity" "sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g=="
   "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/parent-module/-/parent-module-1.0.1/691d2709e78c79fae3a156622452d00762caaaa2.tgz"
@@ -3093,6 +3127,13 @@
   "integrity" "sha512-8V9+HQPupnaXMA23c5hvl69zXvTwTzyAYasnkb0Tts4XvO4CliqONMOnvlq26rkhLC3nWDFBJf73LU1e1VZLaQ=="
   "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/pirates/-/pirates-4.0.5/feec352ea5c3268fb23a37c702ab1699f35a5f3b.tgz"
   "version" "4.0.5"
+
+"pizzip@^3.1.4":
+  "integrity" "sha512-08yol1Of5Og1E0a1R56c+Z1jVkvfTEBUouwG9WYwCqpj8BjdcpEpLgZsrdLFNQYRgtxK0OOe0JpmBWJdrPr6Dg=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/pizzip/-/pizzip-3.1.4.tgz"
+  "version" "3.1.4"
+  dependencies:
+    "pako" "^2.1.0"
 
 "pkg-types@^1.0.3":
   "integrity" "sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A=="
@@ -4225,6 +4266,11 @@
   "integrity" "sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw=="
   "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/xml-name-validator/-/xml-name-validator-4.0.0/79a006e2e63149a8600f15430f0a4725d1524835.tgz"
   "version" "4.0.0"
+
+"xmldom@^0.1.27":
+  "integrity" "sha512-yS2uJflVQs6n+CyjHoaBmVSqIDevTAWrzMmjG1Gc7h1qQ7uVozNhEPJAwZXWyGQ/Gafo3fCwrcaokezLPupVyQ=="
+  "resolved" "https://sutpc-npm.pkg.coding.net/kczx_public_repo/npm/xmldom/-/xmldom-0.1.31.tgz"
+  "version" "0.1.31"
 
 "y18n@^5.0.5":
   "integrity" "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA=="

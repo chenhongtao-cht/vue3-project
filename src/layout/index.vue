@@ -38,6 +38,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow: hidden;
 
   .header-wrap {
     box-sizing: border-box;

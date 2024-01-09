@@ -90,6 +90,14 @@ const routeConfig = [
         }
       },
       {
+        path: '/online-car/driverInfo',
+        name: 'online-car-driverInfo',
+        component: () => import('@/views/online-car/create-word-doc/index.vue'),
+        meta: {
+          title: '涉案车辆处理',
+        }
+      },
+      {
         path: '/common/water-fall',
         name: 'common-water-fall',
         component: () => import('@/views/common/water-fall/index.vue'),

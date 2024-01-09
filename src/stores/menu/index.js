@@ -83,6 +83,12 @@ export const useMenuStore = defineStore('menu', {
               text: '企业统计',
               link: '/online-car/company',
             },
+            {
+              id: '/online-car/driverInfo',
+              text: '涉案车辆处理',
+              link: '/online-car/driverInfo',
+
+            }
           ],
         },
         {
